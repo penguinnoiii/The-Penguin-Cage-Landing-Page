@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Penguin Cafe</title>
+    <title>Cart | The Penguin Cafe</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,29 +19,28 @@
             </button>
         </div>
         <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="menu.html">Menu</a></li>
             <li><a href="cart.html">Cart</a></li>
             <li><a href="login.html">Login</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h2>Start Your Day Right.</h2>
-            <p>Freshly roasted coffee and homemade pastries, served with a smile.</p>
-       
-            <a href="menu.html" class="btn">View Our Menu</a>
+    <section class="menu-hero">
+        <div class="menu-hero-content">
+            <h2>Your Cart</h2>
+            <p>Review items, update quantities, or proceed to checkout.</p>
         </div>
     </section>
 
-    <section id="contact" class="contact-section">
-        <div class="contact-content">
-            <h3>Contact Us</h3>
-            <p>Visit us for a cozy atmosphere and friendly service.</p>
-            <p><strong>Location:</strong> 123 Penguin Lane, Coffee Town</p>
-            <p><strong>Hours:</strong> Mon - Sun, 7:00 AM - 5:00 PM</p>
+    <section class="menu-section" style="max-width:900px;margin:30px auto;">
+        <div id="cart-contents">
+            <!-- Cart items will be rendered here by script.js -->
+        </div>
+        <div id="cart-actions" style="text-align:right;margin-top:18px;">
+            <button id="clear-cart" class="btn" style="margin-right:8px;">Clear Cart</button>
+            <button id="checkout" class="btn">Checkout</button>
         </div>
     </section>
 
