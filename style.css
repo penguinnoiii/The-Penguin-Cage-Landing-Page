@@ -55,10 +55,10 @@ body.dark {
     color: var(--nav-text);
 }
 
-.nav-actions {
+.nav-container {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 20px;
 }
 
 .nav-links {
@@ -66,10 +66,6 @@ body.dark {
     display: flex;
     gap: 20px;
     align-items: center;
-}
-
-.nav-links.open {
-    display: flex;
 }
 
 .nav-links a {
@@ -82,8 +78,7 @@ body.dark {
     color: #d7ccc8;
 }
 
-.theme-toggle,
-.menu-toggle {
+.theme-toggle {
     border: none;
     background: none;
     color: inherit;
@@ -93,41 +88,8 @@ body.dark {
     transition: background 0.25s ease;
 }
 
-.theme-toggle:hover,
-.menu-toggle:hover {
+.theme-toggle:hover {
     background: rgba(255, 255, 255, 0.08);
-}
-
-.menu-toggle {
-    width: 40px;
-    height: 40px;
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.menu-toggle span {
-    display: block;
-    position: absolute;
-    left: 50%;
-    width: 22px;
-    height: 2px;
-    background: currentColor;
-    border-radius: 999px;
-    transform: translateX(-50%);
-}
-
-.menu-toggle span:nth-child(1) {
-    top: 11px;
-}
-
-.menu-toggle span:nth-child(2) {
-    top: 18px;
-}
-
-.menu-toggle span:nth-child(3) {
-    top: 25px;
 }
 
 /* Hero Section */
@@ -252,7 +214,7 @@ footer {
     color: var(--footer-text);
     text-align: center;
     padding: 15px;
-    position: fixed;
+    position: static;
     bottom: 0;
     width: 100%;
 }
@@ -264,25 +226,12 @@ footer {
         justify-content: space-between;
     }
 
-    .nav-actions {
-        order: 1;
-        margin-left: auto;
-    }
-
-    body.js .nav-links {
-        display: none;
-    }
-
     .nav-links {
         width: 100%;
         flex-direction: column;
         align-items: stretch;
         gap: 12px;
         margin-top: 10px;
-    }
-
-    .nav-links.open {
-        display: flex;
     }
 
     .nav-links a {

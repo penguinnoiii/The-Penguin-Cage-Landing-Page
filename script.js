@@ -1,11 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
     var body = document.body;
     var themeToggle = document.querySelector('.theme-toggle');
-    var menuToggle = document.querySelector('.menu-toggle');
     var navLinks = document.querySelector('.nav-links');
     var useServer = false;
 
-    if (!body || !themeToggle || !menuToggle || !navLinks) {
+    if (!body || !themeToggle || !navLinks) {
         return;
     }
 
@@ -23,20 +22,6 @@ document.addEventListener('DOMContentLoaded', function () {
         var currentTheme = body.classList.contains('dark') ? 'dark' : 'light';
         localStorage.setItem('theme', currentTheme);
         updateThemeButton();
-    });
-
-    menuToggle.addEventListener('click', function () {
-        var isOpen = navLinks.classList.toggle('open');
-        menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    });
-
-    navLinks.querySelectorAll('a').forEach(function (link) {
-        link.addEventListener('click', function () {
-            if (navLinks.classList.contains('open')) {
-                navLinks.classList.remove('open');
-                menuToggle.setAttribute('aria-expanded', 'false');
-            }
-        });
     });
 
     function updateThemeButton() {
