@@ -368,7 +368,7 @@ footer {
 
     .nav-links a {
         font-size: 0.9rem;
-        padding: 10px 12px;
+        padding: 0;
     }
 
     .theme-toggle {
